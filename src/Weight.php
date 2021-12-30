@@ -6,6 +6,11 @@ class Weight
 {
     protected $kilograms;
 
+    public static function poundToKilograms(float $pounds): float
+    {
+        return number_format(($pounds * 0.453592), 2, '.', '')  ;
+    }
+
     public static function kilograms(float $kilograms): self
     {
         return new static($kilograms);
